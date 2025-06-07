@@ -1,16 +1,15 @@
-import Header from './core/components/layout/header';
+import { BrowserRouter as Router  } from "react-router-dom";
+import AppRoutes from "./route/Index";
+import AnimatedCursor from "./components/AnimatedCursor";
 
 function App() {
 
- const isDarkBg = true;
+ 
   return (
-    <>
-<Header isDarkBg={isDarkBg} />    
-  <main className="pt-16 bg-black flex flex-col items-center justify-start min-h-screen ">
-        {/* Aquí va tu contenido principal */}
-        {/* ...más contenido... */}
-      </main>
-    </>
+    <Router>
+      <AnimatedCursor />
+        <AppRoutes />
+    </Router>
   )
 }
 

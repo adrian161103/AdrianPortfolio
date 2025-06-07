@@ -12,7 +12,7 @@ const Header: React.FC<HeaderProps> = ({ isDarkBg }) => {
   const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng);
   };
-
+ 
   // Según isDarkBg elegimos text-white o text-black
   const textColorClass = isDarkBg ? 'text-white hover:text-blue-400' : 'text-black hover:text-blue-400';
   const borderClass = isDarkBg ? 'border-transparent focus:ring-blue-400' : 'border-gray-300 focus:ring-gray-700';
@@ -85,6 +85,7 @@ const Header: React.FC<HeaderProps> = ({ isDarkBg }) => {
           </option>
         </select>
       </div>
+    
     </header>
   );
 };
