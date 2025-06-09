@@ -2,5 +2,8 @@
   "home": "Inicio",
   "about": "Sobre Nosotros",
   "contact": "Contacto",
-  "projects": "Proyectos"
+  "projects": "Proyectos",
+
+  "welcomeToMyWebPage": "Bienvenido a mi página web",
+  "whichLanguage": "¿Con qué lenguaje quieres comenzar?"
 }

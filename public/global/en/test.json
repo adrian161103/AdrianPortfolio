@@ -2,5 +2,8 @@
   "home": "Home",
   "about": "About Us",
   "contact": "Contact",
-  "projects": "Projects"
+  "projects": "Projects",
+
+  "welcomeToMyWebPage": "Welcome to my web page",
+  "whichLanguage": "Which language would you like to start with?"
 }

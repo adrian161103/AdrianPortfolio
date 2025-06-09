@@ -3,6 +3,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import NotFoundPage from "../pages/NotFoundPage";
 import Home from "../pages/Home";
 import PublicRoutes from "./PublicRoutes";
+import { Presentation } from "../pages/Presentation";
 
 
 const AppRoutes = () => {
@@ -10,7 +11,8 @@ const AppRoutes = () => {
     <Routes>
 
    <Route element={<PublicRoutes />}>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Presentation />} />
+        <Route path="/home" element={<Home />} />
       </Route>
 
 
