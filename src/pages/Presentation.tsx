@@ -16,7 +16,7 @@ export const Presentation: React.FC = () => {
   };
 
   return (
-    <div className="dark bg-black text-white min-h-screen flex items-center justify-center relative">
+    <main className="dark bg-black text-white min-h-screen flex items-center justify-center relative">
       <LavaLampMetaballs />
       <div className="z-10 text-center p-8">
         <h1 className="text-4xl font-bold mb-4">{t('welcomeToMyWebPage')}</h1>
@@ -42,6 +42,6 @@ export const Presentation: React.FC = () => {
           {lang === 'en' ? 'Continue' : 'Continuar'}
         </button>
       </div>
-    </div>
+    </main>
   );
 };

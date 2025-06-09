@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const NotFoundPage = () => {
   return (
-    <div className="relative min-h-screen flex flex-col items-center justify-center p-4 bg-black overflow-hidden">
+    <main className="relative min-h-screen flex flex-col items-center justify-center p-4 bg-black overflow-hidden">
 
       <div className="bg-black/90 shadow-lg rounded-2xl p-10 max-w-lg w-full text-center border border-white relative z-10">
         <h1 className="text-7xl font-extrabold mb-4 text-white">
@@ -22,7 +22,7 @@ const NotFoundPage = () => {
           Volver al inicio
         </Link>
       </div>
-    </div>
+    </main>
   );
 };
 

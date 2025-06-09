@@ -20,7 +20,7 @@ export const LavaLampMetaballs: React.FC = () => {
     // Animación de subida indefinida
     particles.forEach(p => animateParticle(p, ctx, H));
 
-    // Click/tap para explotar como gota de agua
+    // Click/tap para explotar
     const handleClick = (e: MouseEvent) => {
       const rect = canvas.getBoundingClientRect();
       const x = e.clientX - rect.left;
