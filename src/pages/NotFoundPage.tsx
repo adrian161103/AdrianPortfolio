@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
+import { LavaLampMetaballs } from "../components/Presentation/LavaLampMetaballs";
 
 
 const NotFoundPage = () => {
   return (
     <main className="relative min-h-screen flex flex-col items-center justify-center p-4 bg-black overflow-hidden">
-
+<LavaLampMetaballs/>
       <div className="bg-black/90 shadow-lg rounded-2xl p-10 max-w-lg w-full text-center border border-white relative z-10">
         <h1 className="text-7xl font-extrabold mb-4 text-white">
           404
