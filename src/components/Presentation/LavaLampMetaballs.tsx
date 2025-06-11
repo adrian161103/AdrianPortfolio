@@ -10,7 +10,7 @@ export const LavaLampMetaballs: React.FC = () => {
     let W = canvas.width = canvas.offsetWidth;
     let H = canvas.height = canvas.offsetHeight;
 
-    ctx.filter = 'blur(5px) saturate(1.5)';
+    ctx.filter = ' saturate(1.5)';
     ctx.globalCompositeOperation = 'lighter';
 
     // Partículas y gotas

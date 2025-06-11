@@ -1,8 +1,9 @@
-import { Link } from "react-router-dom";
 import { LavaLampMetaballs } from "../components/Presentation/LavaLampMetaballs";
-
+    import { useNavigate } from 'react-router-dom';
 
 const NotFoundPage = () => {
+  const navigate = useNavigate();
+ 
   return (
     <main className="relative min-h-screen flex flex-col items-center justify-center p-4 bg-black overflow-hidden">
 <LavaLampMetaballs/>
@@ -16,12 +17,13 @@ const NotFoundPage = () => {
         <p className="text-gray-300 mb-8 text-lg">
           Lo sentimos, la página que estás buscando no existe o ha sido movida.
         </p>
-        <Link
-          to="/"
-          className="inline-block bg-white hover:bg-gray-200 text-black font-bold py-2 px-6 rounded-lg shadow transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white"
+        <button
+          onClick={() => navigate(-1)}
+        
+          className=" cursor-pointer inline-block bg-white hover:bg-gray-200 text-black font-bold py-2 px-6 rounded-lg shadow transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white"
         >
-          Volver al inicio
-        </Link>
+          Volver Atrás
+        </button>
       </div>
     </main>
   );

@@ -7,7 +7,7 @@ import Contact from '../components/Home/Contact'
 
 const HomePage: React.FC = () => {
   // Alterna el fondo claro/oscuro para luego superponer cada sección
-  const [isDarkBg] = useState(true)
+  const [isDarkBg] = useState(false)
 
   return (
     <div className={`${isDarkBg ? 'bg-black text-white' : 'bg-white text-black'} min-h-screen transition-colors`}>
@@ -15,7 +15,7 @@ const HomePage: React.FC = () => {
       <Header isDarkBg={isDarkBg} />
 
       {/* Secciones principales */}
-      <Homes />
+      <Homes  />
       <AboutMe />
       <Projects />
       <Contact />
