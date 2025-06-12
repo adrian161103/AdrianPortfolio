@@ -1,27 +1,45 @@
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import Header from '../core/components/layout/header'
 import Homes from '../components/Home/Homes'
 import AboutMe from '../components/Home/AboutMe' 
 import Projects from '../components/Home/Projects' 
 import Contact from '../components/Home/Contact'
 
+
 const HomePage: React.FC = () => {
-  // Alterna el fondo claro/oscuro para luego superponer cada sección
-  const [isDarkBg] = useState(false)
+  // Referencias a las secciones
+  const homesRef = useRef<HTMLDivElement>(null)
+  const aboutMeRef = useRef<HTMLDivElement>(null)
+
+  // Estado para el fondo
+  const [isDarkBg, setIsDarkBg] = useState(true)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const aboutMeTop = aboutMeRef.current?.getBoundingClientRect().top || 0
+      // Si la parte superior de AboutMe está por encima de la mitad de la pantalla, cambiamos el fondo
+   if (aboutMeTop <= 0) {
+  setIsDarkBg(false)
+} else {
+  setIsDarkBg(true)
+}
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   return (
-    <div className={`${isDarkBg ? 'bg-black text-white' : 'bg-white text-black'} min-h-screen transition-colors`}>
-      {/* Header recibe el estado de fondo para ajustar su estilo */}
+   <>
       <Header isDarkBg={isDarkBg} />
-
-      {/* Secciones principales */}
-      <Homes  />
-      <AboutMe />
+      <div ref={homesRef} id="homes">
+        <Homes />
+      </div>
+      <div ref={aboutMeRef} id="aboutme">
+        <AboutMe />
+      </div>
       <Projects />
       <Contact />
-
-      {/* Aquí podrías añadir un Footer, ajustes de idioma, o controles de animación */}
-    </div>
+      </>
   )
 }
 

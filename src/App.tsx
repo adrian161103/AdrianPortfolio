@@ -1,13 +1,13 @@
 import { BrowserRouter as Router  } from "react-router-dom";
 import AppRoutes from "./route/Index";
-import AnimatedCursor from "./components/AnimatedCursor";
+// import AnimatedCursor from "./components/AnimatedCursor";
 
 function App() {
 
  
   return (
     <Router>
-      <AnimatedCursor />
+      {/* <AnimatedCursor /> */}
         <AppRoutes />
     </Router>
   )
