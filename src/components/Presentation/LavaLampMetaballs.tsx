@@ -18,7 +18,7 @@ export const LavaLampMetaballs: React.FC = () => {
     const droplets: Droplet[] = [];
 
     // Animación de subida indefinida
-    particles.forEach(p => animateParticle(p, ctx, H));
+    particles.forEach(p => animateParticle(p, H));
 
     // Click/tap para explotar
     const handleClick = (e: MouseEvent) => {
@@ -53,7 +53,7 @@ export const LavaLampMetaballs: React.FC = () => {
       }
       gsap.killTweensOf(p);
       resetParticle(p, H);
-      animateParticle(p, ctx, H);
+      animateParticle(p, H);
     }
 
     function draw() {
@@ -161,7 +161,7 @@ function resetParticle(p: Particle, H: number) {
   p.opacity = 1;
 }
 
-function animateParticle(p: Particle, ctx: CanvasRenderingContext2D, H: number) {
+function animateParticle(p: Particle, H: number) {
   gsap.to(p, {
     y: -p.r,
     x: `+=${p.drift}`,
