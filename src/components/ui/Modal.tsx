@@ -62,7 +62,7 @@ const Modal: React.FC<ModalProps> = ({ open, onClose, title, children }) => {
           ×
         </button>
         {title && (
-          <h2 className="text-3xl font-extrabold mt-10 mb-8 text-white text-center w-full">
+          <h2 className=" text-3xl font-extrabold mt-12 mb-8 text-white text-center w-full">
             {title}
           </h2>
         )}

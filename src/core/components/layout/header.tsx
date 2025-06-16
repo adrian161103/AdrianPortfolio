@@ -14,8 +14,8 @@ const Header: React.FC<HeaderProps> = ({ isDarkBg }) => {
   };
  
   // Según isDarkBg elegimos text-white o text-black
-  const textColorClass = isDarkBg ? 'text-white hover:text-blue-400' : 'text-black hover:text-blue-400';
-  const borderClass = isDarkBg ? 'border-transparent focus:ring-blue-400' : 'border-gray-300 focus:ring-gray-700';
+  const textColorClass = isDarkBg ? 'text-white hover:text-[#7F5AF0]' : 'text-black hover:text-[#7F5AF0]';
+  const borderClass = isDarkBg ? 'border-transparent focus:ring-[#7F5AF0]' : 'border-gray-300 focus:ring-gray-700';
 
   return (
     <header
@@ -32,7 +32,7 @@ const Header: React.FC<HeaderProps> = ({ isDarkBg }) => {
         <ul className="flex flex-row justify-center gap-8 text-lg font-medium list-none m-0 p-0">
           <li>
             <a
-              href="#home"
+              href="#hero"
               className={`${textColorClass} transition-colors`}
             >
               {t('home')}
@@ -69,6 +69,7 @@ const Header: React.FC<HeaderProps> = ({ isDarkBg }) => {
           value={i18n.language}
           onChange={e => changeLanguage(e.target.value)}
           className={`
+            cursor-pointer
             bg-transparent
             px-2 py-1
             rounded
