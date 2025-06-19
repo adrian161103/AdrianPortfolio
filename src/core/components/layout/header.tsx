@@ -16,7 +16,7 @@ const Header: React.FC<HeaderProps> = ({ isDarkBg }) => {
   // Según isDarkBg elegimos text-white o text-black
   const textColorClass = isDarkBg ? 'text-white hover:text-[#7F5AF0]' : 'text-black hover:text-[#7F5AF0]';
   const borderClass = isDarkBg ? 'border-transparent focus:ring-[#7F5AF0]' : 'border-gray-300 focus:ring-gray-700';
-
+ const hero= () => window.scrollTo(0, 0);
   return (
     <header
       className={`
@@ -29,10 +29,10 @@ const Header: React.FC<HeaderProps> = ({ isDarkBg }) => {
       `}
     >
       <nav className="flex-1">
-        <ul className="flex flex-row justify-center gap-8 text-lg font-medium list-none m-0 p-0">
+        <ul className="flex flex-row justify-center gap-8 text-lg font-medium list-none m-0 p-0 cursor-pointer">
           <li>
             <a
-              href="#hero"
+            onClick={hero}
               className={`${textColorClass} transition-colors`}
             >
               {t('home')}

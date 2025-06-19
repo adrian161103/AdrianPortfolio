@@ -1,9 +1,9 @@
 import React, { useRef, useLayoutEffect, useState } from 'react';
-import { SplitText } from 'gsap/all';
+import { SplitText, ScrollTrigger } from 'gsap/all';
 import { gsap } from 'gsap';
 import Modal from '../ui/Modal';
 
-gsap.registerPlugin(SplitText);
+gsap.registerPlugin(SplitText, ScrollTrigger);
 
 const AboutMe: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -13,9 +13,8 @@ const AboutMe: React.FC = () => {
 
   useLayoutEffect(() => {
     if (!containerRef.current) return;
-    
 
-    // Creamos un contexto de GSAP para React 18
+    // Creamos un contexto de GSAP 
     const ctx = gsap.context(() => {
       const title = containerRef.current!.querySelector('h1') as HTMLElement;
       const subtitle = containerRef.current!.querySelector('p:nth-of-type(1)') as HTMLElement;
@@ -35,8 +34,9 @@ const AboutMe: React.FC = () => {
           y: 25, autoAlpha: 0, 
           ease: 'power2.out', 
           filter: 'blur(20px)',
+            start: 'top top', 
+            end: 'bottom center',
         },
-  
       });
 
       tl
@@ -69,7 +69,9 @@ const AboutMe: React.FC = () => {
           transformOrigin: '50% 50%',
         });
       }
+
  
+
       // Cleanup al desmontar
       return () => {
         splitTitle.revert();
@@ -88,9 +90,9 @@ const AboutMe: React.FC = () => {
 
   return (
     <section
-      id="aboutme"
+    id="about"
       ref={containerRef}
-      className="flex flex-col lg:flex-row items-center justify-center min-h-screen px-6 text-white bg-gradient-to-b from-black via-gray-900 to-black "
+      className="h-[120vh] w-screen flex flex-col lg:flex-row items-center justify-center  px-6 text-white bg-gradient-to-b from-black via-gray-900 to-black "
      
     >
       {/* Izquierda: Texto */}

@@ -1,2 +1,18 @@
 @import "tailwindcss";
-@import "./App.css"
+@import "./App.css";
+
+
+
+@theme{
+--font-sans: "newFont", sans-serif; 
+}
+@font-face {
+    font-family: newFont;
+
+    src: url('/public/fonts/NewFont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+
+
+}
